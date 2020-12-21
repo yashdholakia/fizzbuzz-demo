@@ -1,0 +1,13 @@
+{
+  "name": "fizzbuzz-demo",
+  "version": "1.0.0",
+  "description": "Fizz Buzz on Docker",
+  "author": "Yash Dholakia <yash.1990.2010@gmail.com>",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "^4.16.1"
+  }
+}
