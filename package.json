@@ -1,0 +1,24 @@
+{
+  "name": "fizzbuzz-demo",
+  "version": "1.0.0",
+  "description": "Fizz Buzz on Docker",
+  "author": "Yash Dholakia <yash.1990.2010@gmail.com>",
+  "license": "MIT",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "mocha --timeout 10000"
+  },
+  "dependencies": {
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "express": "^4.16.1",
+    "jsdoc": "^3.6.6",
+    "mocha": "^8.2.1",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "eslint": "^7.16.0",
+    "eslint-config-google": "^0.14.0"
+  }
+}

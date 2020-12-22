@@ -1,0 +1,33 @@
+<h1 id="fizzbuzz-demo">fizzbuzz-demo</h1>
+<h3 id="about-project">You have arrived to this page means the app is up and running!</h3>
+<p>This is a FizzBuzz Demo application which accepts start and end range as valid integer input and returns 'fizz' or 'buzz' based response in JSON format</p>
+<h3 id="criteria">Criteria</h3>
+<ol>
+<li>Numbers are between 0 and 2<sup>32</sup>-1<br /></li>
+<li>If number is only divided by 3, it will be interpreted as <strong>fizz</strong><br /></li>
+<li>If number is only divided by 5, it will be interpreted as <strong>buzz</strong><br /></li>
+<li>If the number is both divisible by 3 and 5,it will be interpreted as <strong>fizzbuzz</strong><br /></li>
+<li>If None of the above, string representation of number will be returned</li>
+</ol>
+
+
+<h3 id="execute">Execute</h3>
+<p>This app requires two input fields, as Start range and End Range and will be passed in URL with<br /><b>http://localhost:8888/range/:start/:end</b> where <b>:start</b> and <b>:end</b> are valid range fields between 0 and 2<sup>32</sup>-1</p>
+<p>If condition is not fullfilled, it will return error in json format like below</p>
+<ul>
+<li><p>If there are invalid inputs,</p>
+<pre><code>{&#39;error&#39;: &#39;Provided input field(s) are not Valid&#39;}</code></pre></li>
+<li><p>If range is invalid (start is greater than less or beyond range)</p>
+<pre><code>{&#39;error&#39;: &#39;Provided range is not valid&#39;}</code></pre></li>
+<li><p>If range is valid, it will return response, for example range between 3 and 16 (:start is 3 and :end is 16)<br /> click <strong>(<a target="_blank" href="http://localhost:8888/range/3/16">http://localhost:8888/range/3/16</a>)</strong> for quick example (or any choice of numbers within range)</p>
+<br> This above link will be opened in a new tab, play with numbers! , here's the sample response of above link
+</li>
+</ul>
+<pre><code>
+    [{&quot;in&quot;:3,&quot;result&quot;:&quot;fizz&quot;},{&quot;in&quot;:4,&quot;result&quot;:&quot;4&quot;},
+    {&quot;in&quot;:5,&quot;result&quot;:&quot;buzz&quot;},{&quot;in&quot;:6,&quot;result&quot;:&quot;fizz&quot;},
+    {&quot;in&quot;:7,&quot;result&quot;:&quot;7&quot;},{&quot;in&quot;:8,&quot;result&quot;:&quot;8&quot;},
+    {&quot;in&quot;:9,&quot;result&quot;:&quot;fizz&quot;},{&quot;in&quot;:10,&quot;result&quot;:&quot;buzz&quot;},
+    {&quot;in&quot;:11,&quot;result&quot;:&quot;11&quot;},{&quot;in&quot;:12,&quot;result&quot;:&quot;fizz&quot;},
+    {&quot;in&quot;:13,&quot;result&quot;:&quot;13&quot;},{&quot;in&quot;:14,&quot;result&quot;:&quot;14&quot;},
+    {&quot;in&quot;:15,&quot;result&quot;:&quot;fizzbuzz&quot;}]</code></pre>
