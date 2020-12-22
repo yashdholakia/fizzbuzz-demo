@@ -8,7 +8,7 @@ module.exports = class FizzBuzzService {
   async prepareFizzBuzz(start, end) {
     const resultArray = [];
 
-    for (let index = start; index < end; index ++) {
+    for (let index = start; index <= end; index ++) {
       const response = {
         in: index,
         result: index.toString(),

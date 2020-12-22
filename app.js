@@ -24,3 +24,5 @@ app.get('/', (req, res) => res.redirect('/range'));
 
 
 app.listen(8888, () => console.log('Server is up and running on Port 8888!'));
+
+module.exports = app;
