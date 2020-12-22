@@ -22,13 +22,21 @@ This is a FizzBuzz Demo application which accepts start and end range as valid i
  * npm
  * Browser
  * docker (optional), follow [Docker](#docker-command) section for more details 
+ 
 
 ### Installation (node)
+    
+ Visit [this](https://nodejs.org/en/) for more information on node and npm
 
 1. Clone the repo
    ```sh
    git clone https://github.com/yashdholakia/fizzbuzz-demo.git
    ```
+    
+    or 
+    
+    Download the zip from [here](https://github.com/yashdholakia/fizzbuzz-demo/archive/main.zip)
+
 2. Install NPM packages
    ```sh
    npm install
@@ -73,6 +81,7 @@ If condition is not fullfilled, it will return error in json format like below
 
 ## Docker command
 
+Visit [here](https://docs.docker.com/engine/install/) for more information on docker
 ### setup
 
 ```sh
