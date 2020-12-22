@@ -2,6 +2,12 @@
 /* eslint-disable max-len */
 const Common = require('../common/common');
 const FizzBuzzService = require('../service/fizzbuzzService');
+const {
+  ERROR_KEY,
+  INVALID_RANGE_MSG,
+  INVALID_INPUT_MSG,
+  ERROR_CODES,
+} = require('../common/constants').MAPPER;
 
 const fizzBuzzService = new FizzBuzzService();
 
@@ -18,17 +24,14 @@ module.exports = class FizzBuzzController {
     if (Common.validateType(start, end) === true) {
       if (Common.validateMinMax(start, end) === true) {
         const response = await fizzBuzzService.prepareFizzBuzz(start, end);
-        res.status(200).send(response);
+        res.status(ERROR_CODES.SUCCESS).send(response);
       } else {
         // error code, start is not less than end
-        res.status(400).send({'error': 'Provided range is not Valid'});
+        res.status(ERROR_CODES.BAD_REQUEST).send({[ERROR_KEY]: INVALID_RANGE_MSG});
       }
     } else {
       // error, input is not number
-      res.status(400).send({'error': 'Provided input field(s) are not Valid'});
+      res.status(ERROR_CODES.BAD_REQUEST).send({[ERROR_KEY]: INVALID_INPUT_MSG});
     }
-  };
-  async showHelp(req, res) {
-    res.status(200).send('');
   };
 };

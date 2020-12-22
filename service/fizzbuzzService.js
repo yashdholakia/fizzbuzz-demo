@@ -1,3 +1,10 @@
+const {
+  RESULT_STR,
+  FIZZ_STR,
+  BUZZ_STR,
+  FIZZ_INT,
+  BUZZ_INT} = require('../common/constants').MAPPER;
+
 module.exports = class FizzBuzzService {
   /**
  * Adds two numbers together.
@@ -14,17 +21,17 @@ module.exports = class FizzBuzzService {
         result: index.toString(),
       };
 
-      if (index % 3 === 0) {
-        response['result'] = 'fizz';
-        if (index % 5 === 0) {
-          response['result'] += 'buzz';
+      if (index % FIZZ_INT === 0) {
+        response[RESULT_STR] = FIZZ_STR;
+        if (index % BUZZ_INT === 0) {
+          response[RESULT_STR] += BUZZ_STR;
         }
         resultArray.push(response);
         continue;
       }
 
-      if (index % 5 === 0) {
-        response['result'] = 'buzz';
+      if (index % BUZZ_INT === 0) {
+        response[RESULT_STR] = BUZZ_STR;
         resultArray.push(response);
       } else {
         resultArray.push(response);

@@ -14,14 +14,7 @@ app.get('/range/', (req, res) => {
   res.sendFile(path.join(__dirname+'/README.html'));
 });
 
-
-app.get('/hello', (req, res) => {
-  res.send('hello');
-});
-
-
 app.get('/', (req, res) => res.redirect('/range'));
-
 
 app.listen(8888, () => console.log('Server is up and running on Port 8888!'));
 
